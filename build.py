@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Legs on the Ground - Static Site Generator
+Unmuted - Static Site Generator
 A simple, elegant build system for content-driven sites
 """
 
@@ -44,7 +44,7 @@ class SiteBuilder:
             'toc'
         ])
         
-        print("🏗️  Legs on the Ground - Site Builder")
+        print("🏗️  Unmuted - Site Builder")
         print("=" * 50)
     
     def load_yaml(self, path):
@@ -288,7 +288,7 @@ class SiteBuilder:
 
 def main():
     """Main entry point"""
-    parser = argparse.ArgumentParser(description='Build the Legs on the Ground website')
+    parser = argparse.ArgumentParser(description='Build the Unmuted website')
     parser.add_argument('--no-clean', action='store_true', help='Do not clean output directory')
     parser.add_argument('--validate', action='store_true', help='Run validation after build')
     args = parser.parse_args()

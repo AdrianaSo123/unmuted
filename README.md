@@ -1,6 +1,6 @@
-# Legs on the Ground - Property Concierge Services
+# Unmuted - Diverse Voices on 2010s Teen Dramas
 
-Professional bilingual property concierge services for mainland owners in Puerto Rico.
+A hub for diverse pop culture opinions from minority voices. Exploring the iconic teen dramas of the 2010s through fresh, authentic perspectives.
 
 ## 🚀 Quick Start
 
@@ -242,30 +242,29 @@ Build metrics are automatically tracked in `build_metrics.log`:
 
 ## 📞 Support
 
-- **Live Site:** https://kaw393939.github.io/legsontheground.com/
+- **Live Site:** https://adrianaso123.github.io/unmuted/
 - **Build System:** Python 3.12 + Jinja2
 - **Deployment:** GitHub Pages (automatic)
 
 ---
 
-**Made with ❤️ using AI-powered development tools**
+**Made with ❤️ for diverse voices in pop culture**
 
 ## 🎯 Overview
 
-This is a modern, maintainable static site built with:
+Unmuted is a modern, maintainable static site built with:
 - **Python 3.12** - Build system
 - **Jinja2** - Template engine
 - **Markdown + YAML** - Content management
 - **No CMS required** - Git-based workflow
 
 **Key Features:**
-- ✅ Content managed in YAML (easy for non-technical users)
+- ✅ Content managed in YAML (easy to update)
 - ✅ Template-based HTML generation (DRY principle)
 - ✅ Single-command build process
-- ✅ AI-powered image analysis (OpenAI Vision API)
 - ✅ Automated quality validation (HTML/CSS/Accessibility)
 - ✅ GitHub Pages deployment ready
-- 🚧 CI/CD with GitHub Actions (Phase 4)
+- ✅ Focus on diverse perspectives in pop culture
 
 ## 🚀 Quick Start
 

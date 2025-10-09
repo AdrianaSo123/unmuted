@@ -1,4 +1,4 @@
-# Makefile for Legs on the Ground website
+# Makefile for Unmuted website
 # Provides convenient shortcuts for common tasks
 
 .PHONY: help build serve dev validate clean backup analyze optimize cleanup status install
@@ -6,7 +6,7 @@
 # Default target
 help:
 	@echo "╔════════════════════════════════════════════════════════╗"
-	@echo "║   Legs on the Ground - Development Commands            ║"
+	@echo "║   Unmuted - Development Commands                       ║"
 	@echo "╚════════════════════════════════════════════════════════╝"
 	@echo ""
 	@echo "📦 Setup:"

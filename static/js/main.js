@@ -1,5 +1,5 @@
 /* ===================================
-   Legs on the Ground - Interactive Features
+   Unmuted - Interactive Features
    =================================== */
 
 // Wait for DOM to be fully loaded
@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     // This can be expanded for a pricing calculator
     
-    console.log('Legs on the Ground website loaded successfully!');
+    console.log('Unmuted website loaded successfully!');
 });
 
 // ===================================

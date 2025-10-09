@@ -156,7 +156,7 @@ class SiteManager:
         
         try:
             result = subprocess.run(
-                ['python', 'build.py'],
+                ['python3', 'build.py'],
                 cwd=self.root,
                 capture_output=True,
                 text=True,
@@ -206,7 +206,7 @@ class SiteManager:
         
         try:
             subprocess.run([
-                'python', '-m', 'http.server', str(port),
+                'python3', '-m', 'http.server', str(port),
                 '--directory', str(output_dir)
             ])
         except KeyboardInterrupt:
@@ -243,7 +243,7 @@ class SiteManager:
         """Run visual analysis"""
         self.logger.info("👁️  Running visual analysis...")
         
-        cmd = ['python', 'tools/visual_inspector.py', '--full', '--analyze']
+        cmd = ['python3', 'tools/visual_inspector.py', '--full', '--analyze']
         
         try:
             subprocess.run(cmd, cwd=self.root, check=True)
@@ -256,7 +256,7 @@ class SiteManager:
         self.logger.info("🖼️  Optimizing images...")
         
         try:
-            subprocess.run(['python', 'tools/image_optimizer.py'], cwd=self.root, check=True)
+            subprocess.run(['python3', 'tools/image_optimizer.py'], cwd=self.root, check=True)
             self.logger.info("✅ Images optimized")
         except subprocess.CalledProcessError:
             self.logger.error("❌ Optimization failed")
@@ -265,7 +265,7 @@ class SiteManager:
         """Clean up project"""
         self.logger.info("🗑️  Cleaning up project...")
         
-        cmd = ['python', 'cleanup_project.py']
+        cmd = ['python3', 'cleanup_project.py']
         if aggressive:
             cmd.append('--aggressive')
         
