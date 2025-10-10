@@ -7,7 +7,7 @@ page_id: "home"
 hero:
   title: "Critical Analysis That's Actually Funny"
   subtitle: "We break down 2010s teen dramas from diverse perspectives—unpacking the good rep, calling out the problematic stuff, and making media literacy entertaining."
-  image: "images/hero/teen_dramas.jpeg"
+  image: "images/hero/hero-main.jpg"
   image_alt: "Collage of iconic 2010s teen drama moments with diverse cultural lens"
   cta_primary:
     text: "Watch Content"
@@ -39,7 +39,7 @@ services:
 cta:
   title: "Ready to Join the Community?"
   description: "Vote on what we cover next, share your thoughts, and connect with other fans"
-  background_image: "images/hero/teen_dramas.jpeg"
+  background_image: "images/hero/hero-main.jpg"
   buttons:
     - text: "Watch More Content"
       url: "playlists.html"
