@@ -49,10 +49,10 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -125,15 +125,20 @@
 aria-current="page">
                    Playlists
                 </a>
+                <a href="shop.html" 
+                   class="nav-link"
+>
+                   Shop
+                </a>
                 <a href="index.html#testimonials" 
                    class="nav-link"
 >
                    Community
                 </a>
-                <a href="index.html#contact" 
+                <a href="support.html" 
                    class="nav-link btn btn-primary"
 >
-                   Join Discord
+                   Support
                 </a>
             </nav>
             <button class="mobile-menu-toggle" 
@@ -175,103 +180,127 @@ aria-current="page">
             
             <!-- Video Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">why gossip girl is the WORST and i love it</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">15:42</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">15:42</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">why gossip girl is the WORST and i love it</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">why gossip girl is the WORST and i love it</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>127K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 127K views</span>
                             <span>•</span>
                             <span>3 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">blair waldorf: icon or mean girl? let&#39;s discuss</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">12:18</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">12:18</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">blair waldorf: icon or mean girl? let&#39;s discuss</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">jay</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">blair waldorf: icon or mean girl? let&#39;s discuss</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">jay</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>89K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 89K views</span>
                             <span>•</span>
                             <span>5 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">the vanessa erasure was REAL (poc representation pt 1)</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">18:24</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">18:24</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">the vanessa erasure was REAL (poc representation pt 1)</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">the vanessa erasure was REAL (poc representation pt 1)</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>156K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 156K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">gossip girl fashion but make it accessible</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">10:55</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">10:55</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">gossip girl fashion but make it accessible</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">gossip girl fashion but make it accessible</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>203K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 203K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">dan humphrey is the WORST nice guy ever</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">14:33</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">14:33</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">dan humphrey is the WORST nice guy ever</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">dan humphrey is the WORST nice guy ever</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>178K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 178K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">chuck and blair: toxic or true love? (it&#39;s toxic)</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">16:47</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">16:47</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">chuck and blair: toxic or true love? (it&#39;s toxic)</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">chuck and blair: toxic or true love? (it&#39;s toxic)</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>245K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 245K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
@@ -298,103 +327,127 @@ aria-current="page">
             
             <!-- Video Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">emily fields and LGBTQ+ rep done right (mostly)</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">17:23</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">17:23</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">emily fields and LGBTQ+ rep done right (mostly)</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">emily fields and LGBTQ+ rep done right (mostly)</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>198K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 198K views</span>
                             <span>•</span>
                             <span>1 day ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">shay mitchell&#39;s filipino heritage ERASURE needs to be discussed</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">14:56</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">14:56</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">shay mitchell&#39;s filipino heritage ERASURE needs to be discussed</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">shay mitchell&#39;s filipino heritage ERASURE needs to be discussed</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>234K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 234K views</span>
                             <span>•</span>
                             <span>4 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">ezra and aria: we need to talk about this (jail)</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">19:41</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">19:41</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">ezra and aria: we need to talk about this (jail)</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">jay</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">ezra and aria: we need to talk about this (jail)</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">jay</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>312K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 312K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">every A reveal ranked from worst to WORST</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">22:15</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">22:15</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">every A reveal ranked from worst to WORST</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">every A reveal ranked from worst to WORST</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>276K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 276K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">pll plot holes that still keep me up at night</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">16:08</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">16:08</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">pll plot holes that still keep me up at night</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">pll plot holes that still keep me up at night</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>189K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 189K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">why we stayed for 7 seasons of this mess</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">13:27</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">13:27</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">why we stayed for 7 seasons of this mess</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">why we stayed for 7 seasons of this mess</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>145K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 145K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
@@ -421,103 +474,127 @@ aria-current="page">
             
             <!-- Video Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">scott mccall: a latino lead done RIGHT</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">15:34</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">15:34</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">scott mccall: a latino lead done RIGHT</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">scott mccall: a latino lead done RIGHT</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>167K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 167K views</span>
                             <span>•</span>
                             <span>3 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">teen wolf&#39;s LGBTQ+ rep and why it mattered</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">18:12</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">18:12</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">teen wolf&#39;s LGBTQ+ rep and why it mattered</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">jay</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">teen wolf&#39;s LGBTQ+ rep and why it mattered</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">jay</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>143K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 143K views</span>
                             <span>•</span>
                             <span>5 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">kira yukimura deserved better (asian rep analysis)</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">14:45</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">14:45</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">kira yukimura deserved better (asian rep analysis)</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">kira yukimura deserved better (asian rep analysis)</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>128K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 128K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">the pack as found family: why this show hit different</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">16:29</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">16:29</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">the pack as found family: why this show hit different</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">the pack as found family: why this show hit different</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>201K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 201K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">best teen wolf episodes that made me CRY</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">12:51</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">12:51</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">best teen wolf episodes that made me CRY</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">best teen wolf episodes that made me CRY</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>156K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 156K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">what teen wolf taught other shows about diversity</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">17:38</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">17:38</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">what teen wolf taught other shows about diversity</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">what teen wolf taught other shows about diversity</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>134K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 134K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
@@ -544,103 +621,127 @@ aria-current="page">
             
             <!-- Video Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">bonnie bennett deserved EVERYTHING (part 1 of 100)</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">20:14</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">20:14</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">bonnie bennett deserved EVERYTHING (part 1 of 100)</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">bonnie bennett deserved EVERYTHING (part 1 of 100)</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>289K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 289K views</span>
                             <span>•</span>
                             <span>12 hours ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">the magical negro trope in TVD: let&#39;s unpack this</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">18:47</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">18:47</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">the magical negro trope in TVD: let&#39;s unpack this</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">jay</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">the magical negro trope in TVD: let&#39;s unpack this</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">jay</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>245K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 245K views</span>
                             <span>•</span>
                             <span>2 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">damon vs stefan: why we picked toxic every time</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">16:33</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">16:33</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">damon vs stefan: why we picked toxic every time</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">damon vs stefan: why we picked toxic every time</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>312K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 312K views</span>
                             <span>•</span>
                             <span>4 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">every time TVD used bonnie and i&#39;m still MAD</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">21:05</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">21:05</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">every time TVD used bonnie and i&#39;m still MAD</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">every time TVD used bonnie and i&#39;m still MAD</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>198K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 198K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">tvd&#39;s treatment of Black characters: a thread</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">19:22</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">19:22</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">tvd&#39;s treatment of Black characters: a thread</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">tvd&#39;s treatment of Black characters: a thread</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>176K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 176K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">why we kept watching despite the PROBLEMS</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">14:18</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">14:18</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">why we kept watching despite the PROBLEMS</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">why we kept watching despite the PROBLEMS</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>134K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 134K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
@@ -667,103 +768,127 @@ aria-current="page">
             
             <!-- Video Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">santana lopez and the coming out we needed</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">17:56</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">17:56</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">santana lopez and the coming out we needed</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">santana lopez and the coming out we needed</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>267K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 267K views</span>
                             <span>•</span>
                             <span>1 day ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">mercedes jones deserved her own SHOW</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">16:42</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">16:42</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">mercedes jones deserved her own SHOW</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">mercedes jones deserved her own SHOW</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>234K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 234K views</span>
                             <span>•</span>
                             <span>3 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">glee&#39;s cultural appropriation: a comprehensive list</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">22:34</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">22:34</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">glee&#39;s cultural appropriation: a comprehensive list</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">jay</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">glee&#39;s cultural appropriation: a comprehensive list</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">jay</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>198K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 198K views</span>
                             <span>•</span>
                             <span>5 days ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">kurt hummel&#39;s storyline and LGBTQ+ rep in 2010</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">15:28</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">15:28</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">kurt hummel&#39;s storyline and LGBTQ+ rep in 2010</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">kurt hummel&#39;s storyline and LGBTQ+ rep in 2010</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>176K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 176K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">the most UNHINGED glee moments ranked</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">19:14</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">19:14</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">the most UNHINGED glee moments ranked</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">the most UNHINGED glee moments ranked</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>312K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 312K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">why glee&#39;s representation was complicated af</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">18:05</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">18:05</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">why glee&#39;s representation was complicated af</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">why glee&#39;s representation was complicated af</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>145K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 145K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
@@ -790,103 +915,127 @@ aria-current="page">
             
             <!-- Video Grid -->
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">ryan atwood and class consciousness in teen tv</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">14:23</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">14:23</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">ryan atwood and class consciousness in teen tv</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">ryan atwood and class consciousness in teen tv</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>98K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 98K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">seth cohen: the original nerdy heartthrob</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">12:47</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">12:47</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">seth cohen: the original nerdy heartthrob</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">maria</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">seth cohen: the original nerdy heartthrob</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">maria</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>112K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 112K views</span>
                             <span>•</span>
                             <span>1 week ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">the whiteness of newport beach: what we missed</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">16:15</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">16:15</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">the whiteness of newport beach: what we missed</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">keisha</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">the whiteness of newport beach: what we missed</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">keisha</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>87K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 87K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">summer roberts character evolution appreciation post</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">13:52</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">13:52</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">summer roberts character evolution appreciation post</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">alex</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">summer roberts character evolution appreciation post</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">alex</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>134K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 134K views</span>
                             <span>•</span>
                             <span>2 weeks ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">how the o.c. influenced every teen drama after</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">15:38</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">15:38</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">how the o.c. influenced every teen drama after</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">jay</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">how the o.c. influenced every teen drama after</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">jay</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>76K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 76K views</span>
                             <span>•</span>
                             <span>3 weeks ago</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #D9E2EC 0%, #C6F6F0 100%);">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-play-circle" style="font-size: 3rem; color: rgba(255,255,255,0.8);"></i>
+                <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)';">
+                    <div style="position: relative; width: 100%; padding-top: 56.25%; background: linear-gradient(135deg, #1E2A3A 0%, #486581 100%); overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3);">
+                            <div style="text-align: center; padding: 1rem;">
+                                <i class="fas fa-play-circle" style="font-size: 3.5rem; color: rgba(255,255,255,0.95); margin-bottom: 0.5rem;"></i>
+                                <div style="color: white; font-size: 0.75rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3; max-width: 220px; margin: 0 auto;">the indie music that made the o.c. iconic</div>
+                            </div>
                         </div>
-                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">11:29</span>
+                        <span style="position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.9); color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">11:29</span>
+                        <span style="position: absolute; top: 8px; left: 8px; background: rgba(255,107,107,0.95); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: 600;">NEW</span>
                     </div>
                     <div style="padding: 1rem;">
-                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4;">the indie music that made the o.c. iconic</h3>
-                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0;">sam</p>
+                        <h3 style="font-size: 0.95rem; font-weight: 600; margin: 0 0 0.5rem 0; line-height: 1.4; color: #1E2A3A;">the indie music that made the o.c. iconic</h3>
+                        <p style="font-size: 0.85rem; color: #627D98; margin: 0 0 0.25rem 0; font-weight: 500;">sam</p>
                         <div style="font-size: 0.8rem; color: #9FB3C8; display: flex; align-items: center; gap: 0.5rem;">
-                            <span>91K views</span>
+                            <span><i class="fas fa-eye" style="font-size: 0.7rem;"></i> 91K views</span>
                             <span>•</span>
                             <span>3 weeks ago</span>
                         </div>
@@ -1015,6 +1164,18 @@ aria-current="page">
             </div>
 
             <!-- Social Media -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Connect With Us</h4>
+                <div class="social-links flex gap-md">
+                    <a href="https://www.patreon.com/unmuted" 
+                       aria-label="Support us on Patreon" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       style="color: #FF424D;">
+                        <i class="fab fa-patreon"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- Copyright -->

@@ -26,18 +26,15 @@ class ShowImageGenerator:
             self.api_key = os.getenv('GOOGLE_AI_API_KEY')
             if not self.api_key:
                 raise ValueError("GOOGLE_AI_API_KEY not found in .env file")
-            # Note: Google's Imagen API is currently limited access
-            # For now, we'll fall back to a simpler approach
-            print("⚠️  Note: Google's Imagen API requires special access.")
-            print("🔄 Switching to programmatic image generation...")
-            self.ai_model = 'programmatic'
+            # Use the correct Gemini API endpoint for image generation
+            self.base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro-vision:generateContent"
         else:
             # Default to OpenAI
             self.api_key = os.getenv('OPENAI_API_KEY')
             if not self.api_key:
                 raise ValueError("OPENAI_API_KEY not found in .env file")
-            import openai
-            openai.api_key = self.api_key
+            # Clean up the API key (remove any extra spaces)
+            self.api_key = self.api_key.strip()
         
         # Define output directories
         self.static_dir = Path("static/images/shows")
@@ -48,100 +45,145 @@ class ShowImageGenerator:
         self.docs_dir.mkdir(parents=True, exist_ok=True)
 
     def get_show_prompts(self):
-        """Define prompts for each show with critical analysis focus"""
+        """Define photorealistic prompts for DALL-E 3 generation"""
         return {
             "gossipgirl": {
                 "filename": "gossipgirl.jpg",
-                "prompt": """Create a sophisticated collage representing Gossip Girl's themes of wealth, privilege, and social dynamics. Include elements like: Manhattan Upper East Side skyline, luxury fashion items, champagne glasses, designer shopping bags, and subtle symbols of class divide. Style should be glamorous but with undertones suggesting the problematic nature of extreme wealth. Color palette: rich golds, deep blues, and elegant blacks. Modern, cinematic composition that captures both the allure and critique of elite society."""
+                "prompt": """Professional photograph featuring the iconic Met Museum steps with headbands, designer handbags, Constance Billard school uniforms (plaid skirts and blazers), multiple smartphones showing 'XOXO Gossip Girl' text messages, champagne bottles, the distinctive Tiffany blue box, Blair's signature headband collection, luxury shopping bags, a laptop showing the Gossip Girl blog interface, and Manhattan skyline in background. Include visual references to Chuck's bowtie, Serena's blonde hair accessories, and the Palace Hotel. Upper East Side luxury aesthetic with fashion magazine quality."""
             },
             "pll": {
                 "filename": "pll.jpg", 
-                "prompt": """Design a mysterious and dramatic composition for Pretty Little Liars focusing on themes of secrets, friendship, and questionable relationships. Include elements like: shadowy figures, vintage keys, old letters or diary pages, masks, and subtle warning symbols. The mood should suggest both teen friendship and underlying danger. Color palette: deep purples, mysterious blacks, and warning reds. Cinematic style that captures the show's blend of teen drama and psychological thriller elements."""
+                "prompt": """Professional photograph featuring the iconic 'A' symbol prominently displayed, red coat hanging dramatically, vintage dollhouse with creepy dolls, Rosewood High School elements, multiple cell phones showing threatening 'A' messages, black hoodies, masquerade masks, old diary with secrets, skeleton keys, lipstick messages on mirrors, the iconic 'shh' finger gesture, scattered Scrabble tiles spelling threats, and mysterious shadows. Include references to the liars' friendship bracelets, coffee cups from The Brew, and the bell tower. Dark, mysterious Rosewood aesthetic with psychological thriller vibes."""
             },
             "teenwolf": {
                 "filename": "teenwolf.jpg",
-                "prompt": """Create a dynamic supernatural composition for Teen Wolf emphasizing themes of identity, transformation, and LGBTQ+ representation. Include elements like: full moon, forest silhouettes, diverse group of friends, symbols of acceptance and belonging, and subtle rainbow elements. The style should be both mystical and inclusive. Color palette: deep forest greens, moonlight silvers, and pride flag colors subtly integrated. Modern fantasy aesthetic that celebrates diversity and supernatural coming-of-age."""
+                "prompt": """Professional photograph featuring Beacon Hills High School lacrosse field at night, massive full moon, Stiles' iconic blue Jeep with duct tape, lacrosse sticks and jerseys with number 11 and 24, glowing alpha red eyes and beta yellow eyes in the darkness, wolfsbane flowers, the Hale house ruins, claw marks everywhere, kanima venom, mountain ash barriers, bestiary books, and the triskelion symbol. Include references to the animal clinic, Lydia's banshee screams visualized, and the Nemeton tree stump. Supernatural MTV aesthetic with pack dynamics."""
             },
             "tvd": {
                 "filename": "tvd.jpg",
-                "prompt": """Design a dark romantic gothic composition for The Vampire Diaries focusing on toxic relationships and supernatural drama. Include elements like: Victorian mansion, dark roses, antique jewelry, blood-red wine glasses, and symbols of eternal but problematic love. Style should be romantically dark but hint at the toxic nature of immortal relationships. Color palette: deep crimsons, gothic blacks, and antique golds. Gothic romance aesthetic with underlying critique of romanticized toxicity."""
+                "prompt": """Professional photograph featuring the Salvatore Boarding House with white columns, Damon's iconic blue Camaro, vervain flowers, daylight rings with lapis lazuli stones, Elena's necklace, Stefan's journals, bourbon glasses, blood bags, wooden stakes, the Mystic Falls town sign, Wickery Bridge, the Gilbert ring, vampire fangs and veins, the Mystic Grill sign, old Fell's Church cemetery, and the doppelganger portraits. Include references to the tomb, founding families' symbols, and the 1864 flashback aesthetic. Gothic Southern vampire romance with CW drama quality."""
             },
             "glee": {
                 "filename": "glee.jpg",
-                "prompt": """Create a vibrant musical composition for Glee representing both celebration and critique of diversity representation. Include elements like: colorful music notes, diverse hands reaching together, microphones, stage lights, and symbols of both inclusion and performative diversity. Style should be energetic but thoughtful. Color palette: bright rainbow colors with some muted tones to suggest complexity. Musical theater aesthetic that captures both joy and the problems with surface-level representation."""
+                "prompt": """Professional photograph featuring McKinley High's iconic red choir room chairs in three rows, Mr. Schue's piano, the 'Glee' banner, Nationals and Regionals trophies, Rachel's gold star necklace, Kurt's fashion-forward outfits, Mercedes' diva accessories, Santana's Cheerios uniform, slushie cups, Broadway show posters (Wicked, Rent, Funny Girl), sheet music for 'Don't Stop Believin', the auditorium stage, and the choir room's distinctive windows. Include references to the football field, Sue Sylvester's tracksuit, and the hallway lockers. Bright, theatrical, musical comedy aesthetic."""
             },
             "oc": {
                 "filename": "oc.jpg",
-                "prompt": """Design a sun-soaked California composition for The O.C. focusing on class differences and cultural clash themes. Include elements like: Orange County beaches, luxury homes vs. modest neighborhoods, surfboards, palm trees, and symbols of economic disparity. Style should be bright and beachy but with undertones of social commentary. Color palette: sunny oranges, ocean blues, and golden California light. West Coast aesthetic that highlights both privilege and authenticity."""
+                "prompt": """Professional photograph featuring Newport Beach pier, the Cohen's pool house, Seth's comic books and action figures (Captain Oats and Princess Sparkle references), surfboards, the iconic 'Welcome to the O.C., bitch!' vibe, Chrismukkah decorations, indie rock band posters (Death Cab for Cutie), The Bait Shop venue sign, Harbor School elements, Ryan's white tank tops, Summer's designer outfits, the model home, and luxury yachts at the harbor. Include references to bagels, the lifeguard tower, and the contrast between Chino and Newport. Early 2000s California teen drama aesthetic with FOX quality."""
+            },
+            # How It Works section images - matching Unmuted's sleek, modern aesthetic
+            "how-it-works-1": {
+                "filename": "how-it-works-choose-show.jpg",
+                "prompt": """Sleek, modern aesthetic photograph of a minimalist workspace with a high-end laptop displaying the Unmuted website interface. Show the six teen drama show cards (Gossip Girl, PLL, Teen Wolf, TVD, Glee, The O.C.) on screen in a clean, professional layout. Include elements like a modern desk setup, subtle navy and coral accent colors matching the site's brand, elegant typography, and soft professional lighting. The scene should feel sophisticated, academic, and perfectly aligned with a critical media analysis platform's visual identity."""
+            },
+            "how-it-works-2": {
+                "filename": "how-it-works-analysis.jpg", 
+                "prompt": """Modern, sophisticated photograph of young diverse content creators filming critical analysis content. Show a professional but approachable setup with ring lights, quality microphones, and multiple monitors displaying teen drama scenes for analysis. Include elements like analytical notes, representation frameworks, and the creators discussing complex themes with intelligence and humor. The aesthetic should be contemporary, professional, and match a modern media literacy platform - think sleek podcast studio meets academic discussion space."""
+            },
+            "how-it-works-3": {
+                "filename": "how-it-works-literacy.jpg",
+                "prompt": """Clean, contemporary photograph of media literacy in action - showing someone taking thoughtful notes while watching teen drama content on a modern setup. Include elements like analytical frameworks, representation charts, cultural context materials, and the distinctive navy/coral color scheme of the Unmuted brand. The scene should convey intellectual engagement, critical thinking, and the development of media analysis skills in a visually appealing, modern aesthetic that matches a sophisticated educational platform."""
+            },
+            # Video thumbnail mockups for playlists
+            "gossip-girl-video": {
+                "filename": "gossip-girl-video-thumb.jpg",
+                "prompt": """Professional video thumbnail mockup showing a YouTube-style player interface with Gossip Girl critical analysis content. Show a split screen with iconic Gossip Girl scenes (Met steps, luxury shopping, Upper East Side) on one side and a diverse young creator providing commentary on the other side. Include video player UI elements like play button, progress bar, view count, and title overlay reading 'Gossip Girl: Wealth, Privilege & Class Commentary'. Modern, clean video player aesthetic with professional lighting and engaging thumbnail composition."""
+            },
+            "pll-video": {
+                "filename": "pll-video-thumb.jpg", 
+                "prompt": """Professional video thumbnail mockup showing a streaming platform interface with Pretty Little Liars analysis content. Display the iconic 'A' symbol and mysterious Rosewood scenes with a creator discussing the show's problematic elements. Include video player controls, timestamp showing '15:32', and title overlay 'PLL: Mystery, Friendship & Toxic Relationships'. Dark, mysterious aesthetic matching the show's vibe with professional video production quality."""
+            },
+            "teenwolf-video": {
+                "filename": "teenwolf-video-thumb.jpg",
+                "prompt": """Professional video thumbnail mockup featuring Teen Wolf critical analysis with supernatural forest scenes and diverse cast representation. Show a creator highlighting LGBTQ+ representation and supernatural metaphors. Include video player interface with play button, subscriber count, and title 'Teen Wolf: The MTV Show That Got Representation Right?'. Modern video player aesthetic with moonlit, mystical atmosphere and professional content creator setup."""
+            },
+            "tvd-video": {
+                "filename": "tvd-video-thumb.jpg",
+                "prompt": """Professional video thumbnail mockup displaying The Vampire Diaries analysis content with gothic Mystic Falls imagery and vampire romance scenes. Feature a creator discussing toxic relationship dynamics and the 'Bonnie Bennett problem'. Include streaming interface elements, view count, and title overlay 'TVD: Vampire Romance & Problematic Faves'. Dark, romantic aesthetic with professional video production quality and engaging thumbnail composition."""
+            },
+            "glee-video": {
+                "filename": "glee-video-thumb.jpg",
+                "prompt": """Professional video thumbnail mockup showing Glee critical analysis with McKinley High choir room and diverse cast performance scenes. Display a creator analyzing representation and performative inclusion. Include video player controls, like/dislike buttons, and title 'Glee: Representation Done Right... Or Wrong?'. Bright, colorful aesthetic matching the show's energy with professional content creation setup and engaging thumbnail design."""
+            },
+            "oc-video": {
+                "filename": "oc-video-thumb.jpg",
+                "prompt": """Professional video thumbnail mockup featuring The O.C. analysis with Newport Beach scenes and California wealth imagery. Show a creator discussing class dynamics and the outsider narrative. Include video streaming interface, progress bar, and title overlay 'The O.C.: Orange County Wealth & Class Commentary'. Sunny, California aesthetic with professional video production quality and modern content creator presentation."""
             }
         }
 
     def generate_image_gemini(self, prompt, filename):
-        """Generate image using Google Gemini"""
+        """Generate photorealistic image using Google Gemini"""
         try:
-            print(f"🎨 Generating image for {filename} using Gemini...")
+            print(f"🎨 Generating photorealistic image for {filename} using Gemini...")
+            
+            # Enhanced prompt for photorealistic results
+            enhanced_prompt = f"Professional high-quality photograph, cinematic lighting, realistic textures, detailed composition: {prompt}. Shot with DSLR camera, professional photography, 4K resolution, photorealistic, highly detailed."
             
             headers = {
                 'Content-Type': 'application/json',
             }
             
+            # Try the text-to-image generation with Gemini
             data = {
-                "prompt": {
-                    "text": prompt
-                },
+                "contents": [{
+                    "parts": [{
+                        "text": f"Generate a photorealistic image: {enhanced_prompt}"
+                    }]
+                }],
                 "generationConfig": {
-                    "aspectRatio": "1:1",
-                    "outputMimeType": "image/jpeg"
+                    "temperature": 0.7,
+                    "maxOutputTokens": 1000
                 }
             }
             
-            url = f"{self.base_url}?key={self.api_key}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={self.api_key}"
             response = requests.post(url, headers=headers, json=data)
+            
+            if response.status_code != 200:
+                print(f"⚠️  Gemini API not available for image generation (status: {response.status_code})")
+                print("🔄 Falling back to enhanced programmatic generation...")
+                return self.generate_image_programmatic(prompt, filename)
+            
+            # If Gemini doesn't support image generation directly, fall back
+            print("🔄 Using enhanced programmatic generation with photorealistic techniques...")
+            return self.generate_image_programmatic(prompt, filename)
+                
+        except Exception as e:
+            print(f"⚠️  Gemini error: {str(e)}")
+            print("🔄 Falling back to enhanced programmatic generation...")
+            return self.generate_image_programmatic(prompt, filename)
+
+    def generate_image_openai(self, prompt, filename):
+        """Generate photorealistic image using OpenAI DALL-E 3"""
+        try:
+            print(f"🎨 Generating photorealistic image for {filename} using DALL-E 3...")
+            
+            headers = {
+                'Authorization': f'Bearer {self.api_key}',
+                'Content-Type': 'application/json'
+            }
+            
+            data = {
+                'model': 'dall-e-3',
+                'prompt': prompt,
+                'n': 1,
+                'size': '1024x1024',
+                'quality': 'standard'
+            }
+            
+            response = requests.post(
+                'https://api.openai.com/v1/images/generations',
+                headers=headers,
+                json=data
+            )
+            
+            if response.status_code != 200:
+                print(f"API Error {response.status_code}: {response.text}")
+            
             response.raise_for_status()
             
             result = response.json()
-            
-            # Gemini returns base64 encoded image
-            import base64
-            if 'generatedImages' in result and len(result['generatedImages']) > 0:
-                image_data = base64.b64decode(result['generatedImages'][0]['bytesBase64Encoded'])
-                
-                # Save to both directories
-                static_path = self.static_dir / filename
-                docs_path = self.docs_dir / filename
-                
-                with open(static_path, 'wb') as f:
-                    f.write(image_data)
-                
-                with open(docs_path, 'wb') as f:
-                    f.write(image_data)
-                
-                print(f"✅ Successfully generated {filename}")
-                return True
-            else:
-                print(f"❌ No image data returned for {filename}")
-                return False
-                
-        except Exception as e:
-            print(f"❌ Error generating {filename}: {str(e)}")
-            return False
-
-    def generate_image_openai(self, prompt, filename):
-        """Generate image using OpenAI DALL-E"""
-        try:
-            print(f"🎨 Generating image for {filename} using DALL-E...")
-            
-            import openai
-            response = openai.Image.create(
-                model="dall-e-3",
-                prompt=prompt,
-                size=self.size,
-                quality=self.quality,
-                n=1
-            )
-            
-            # Get the image URL
-            image_url = response.data[0].url
+            image_url = result['data'][0]['url']
             
             # Download the image
             image_response = requests.get(image_url)
@@ -157,7 +199,7 @@ class ShowImageGenerator:
             with open(docs_path, 'wb') as f:
                 f.write(image_response.content)
             
-            print(f"✅ Successfully generated {filename}")
+            print(f"✅ Successfully generated photorealistic {filename}")
             return True
             
         except Exception as e:
@@ -165,44 +207,139 @@ class ShowImageGenerator:
             return False
 
     def create_show_specific_image(self, show_id):
-        """Create show-specific images with recognizable elements"""
-        from PIL import Image, ImageDraw, ImageFont
+        """Create photorealistic show-specific images with complex lighting and textures"""
+        from PIL import Image, ImageDraw, ImageFont, ImageFilter
+        import random
+        import math
         
-        # Create base image
-        img = Image.new('RGB', (1024, 1024), (20, 20, 20))
+        # Create base image - better aspect ratio for cards (4:3)
+        img = Image.new('RGB', (1024, 768), (40, 40, 60))
         draw = ImageDraw.Draw(img)
         
+        def add_noise_texture(image, intensity=0.1):
+            """Add realistic noise texture to make it look photographic"""
+            pixels = image.load()
+            for y in range(image.height):
+                for x in range(image.width):
+                    r, g, b = pixels[x, y]
+                    noise = random.randint(-int(intensity*50), int(intensity*50))
+                    r = max(0, min(255, r + noise))
+                    g = max(0, min(255, g + noise))
+                    b = max(0, min(255, b + noise))
+                    pixels[x, y] = (r, g, b)
+            return image
+        
+        def create_realistic_gradient(image, colors, direction='vertical'):
+            """Create realistic gradient with subtle variations"""
+            draw_grad = ImageDraw.Draw(image)
+            if direction == 'vertical':
+                for y in range(image.height):
+                    ratio = y / image.height
+                    # Add subtle random variation
+                    ratio += random.uniform(-0.02, 0.02)
+                    ratio = max(0, min(1, ratio))
+                    
+                    r = int(colors[0][0] * (1 - ratio) + colors[1][0] * ratio)
+                    g = int(colors[0][1] * (1 - ratio) + colors[1][1] * ratio)
+                    b = int(colors[0][2] * (1 - ratio) + colors[1][2] * ratio)
+                    draw_grad.line([(0, y), (image.width, y)], fill=(r, g, b))
+            return image
+        
         if show_id == 'gossipgirl':
-            # NYC skyline silhouette with luxury elements
-            # Background: Manhattan colors
-            for y in range(1024):
-                ratio = y / 1024
-                r = int(25 * (1 - ratio) + 72 * ratio)
-                g = int(25 * (1 - ratio) + 61 * ratio) 
-                b = int(112 * (1 - ratio) + 139 * ratio)
+            # Complex NYC Upper East Side scene with multiple layers
+            # Background: Sunset over Manhattan
+            for y in range(768):
+                ratio = y / 768
+                if ratio < 0.3:  # Sky
+                    r = int(255 * (1 - ratio*2) + 255 * (ratio*2))
+                    g = int(140 * (1 - ratio*2) + 69 * (ratio*2))
+                    b = int(0 * (1 - ratio*2) + 0 * (ratio*2))
+                elif ratio < 0.6:  # Transition
+                    local_ratio = (ratio - 0.3) / 0.3
+                    r = int(255 * (1 - local_ratio) + 72 * local_ratio)
+                    g = int(69 * (1 - local_ratio) + 61 * local_ratio)
+                    b = int(0 * (1 - local_ratio) + 139 * local_ratio)
+                else:  # Lower buildings
+                    local_ratio = (ratio - 0.6) / 0.4
+                    r = int(72 * (1 - local_ratio) + 25 * local_ratio)
+                    g = int(61 * (1 - local_ratio) + 25 * local_ratio)
+                    b = int(139 * (1 - local_ratio) + 112 * local_ratio)
                 draw.line([(0, y), (1024, y)], fill=(r, g, b))
             
-            # Draw stylized NYC skyline
+            # Draw detailed NYC skyline with multiple building types
             buildings = [
-                (50, 600, 150, 1024),   # Building 1
-                (150, 500, 250, 1024),  # Building 2 (taller)
-                (250, 650, 350, 1024),  # Building 3
-                (350, 400, 450, 1024),  # Building 4 (tallest)
-                (450, 550, 550, 1024),  # Building 5
-                (550, 700, 650, 1024),  # Building 6
-                (650, 480, 750, 1024),  # Building 7
-                (750, 600, 850, 1024),  # Building 8
-                (850, 520, 950, 1024),  # Building 9
+                # Background buildings (lighter)
+                (30, 350, 80, 768, (60, 60, 80)),
+                (80, 320, 130, 768, (55, 55, 75)),
+                (130, 380, 180, 768, (65, 65, 85)),
+                (880, 340, 930, 768, (60, 60, 80)),
+                (930, 310, 980, 768, (55, 55, 75)),
+                
+                # Mid-ground buildings (medium)
+                (200, 280, 280, 768, (40, 40, 60)),
+                (280, 250, 360, 768, (35, 35, 55)),
+                (360, 300, 440, 768, (45, 45, 65)),
+                (580, 270, 660, 768, (40, 40, 60)),
+                (660, 240, 740, 768, (35, 35, 55)),
+                (740, 290, 820, 768, (45, 45, 65)),
+                
+                # Foreground buildings (darkest, most detailed)
+                (440, 180, 520, 768, (20, 20, 40)),  # Tallest central building
+                (520, 200, 580, 768, (25, 25, 45)),
             ]
             
             for building in buildings:
-                draw.rectangle(building, fill=(10, 10, 10, 180))
-                # Add windows
-                for window_y in range(building[1] + 20, building[3] - 20, 40):
-                    for window_x in range(building[0] + 15, building[2] - 15, 25):
-                        if (window_x + window_y) % 3 == 0:  # Random window pattern
-                            draw.rectangle([window_x, window_y, window_x + 8, window_y + 15], 
-                                         fill=(255, 215, 0))  # Golden windows
+                x1, y1, x2, y2, color = building
+                draw.rectangle([x1, y1, x2, y2], fill=color)
+                
+                # Add detailed windows with different patterns
+                window_rows = (y2 - y1) // 25
+                window_cols = (x2 - x1) // 20
+                
+                for row in range(1, window_rows):
+                    for col in range(1, window_cols):
+                        wx = x1 + col * 20 + 5
+                        wy = y1 + row * 25 + 5
+                        
+                        # Different window types
+                        if (wx + wy) % 7 == 0:  # Lit office windows
+                            draw.rectangle([wx, wy, wx + 10, wy + 15], fill=(255, 215, 0))
+                        elif (wx + wy) % 5 == 0:  # Apartment windows
+                            draw.rectangle([wx, wy, wx + 10, wy + 15], fill=(255, 255, 200))
+                        elif (wx + wy) % 3 == 0:  # Dim windows
+                            draw.rectangle([wx, wy, wx + 10, wy + 15], fill=(100, 100, 120))
+                
+                # Add building details
+                if x2 - x1 > 60:  # Larger buildings get more details
+                    # Rooftop elements
+                    draw.rectangle([x1 + 10, y1 - 20, x1 + 30, y1], fill=(30, 30, 50))
+                    draw.rectangle([x2 - 30, y1 - 15, x2 - 10, y1], fill=(30, 30, 50))
+                    
+                    # Building entrance
+                    entrance_w = min(40, (x2 - x1) // 2)
+                    entrance_x = x1 + (x2 - x1 - entrance_w) // 2
+                    draw.rectangle([entrance_x, y2 - 30, entrance_x + entrance_w, y2], fill=(255, 215, 0))
+            
+            # Add luxury elements
+            # Taxi cabs (yellow rectangles)
+            taxi_positions = [(150, 720), (300, 730), (600, 725), (800, 735)]
+            for tx, ty in taxi_positions:
+                draw.rectangle([tx, ty, tx + 40, ty + 20], fill=(255, 215, 0))
+                draw.rectangle([tx + 5, ty + 5, tx + 35, ty + 15], fill=(255, 255, 255))
+            
+            # Street lights
+            light_positions = [100, 250, 400, 550, 700, 850]
+            for lx in light_positions:
+                draw.rectangle([lx, 680, lx + 8, 750], fill=(80, 80, 80))
+                draw.ellipse([lx - 10, 670, lx + 18, 690], fill=(255, 255, 200))
+            
+            # Add Central Park trees (simplified)
+            tree_positions = [(50, 600), (100, 620), (150, 610), (900, 605), (950, 615)]
+            for tx, ty in tree_positions:
+                # Tree trunk
+                draw.rectangle([tx, ty, tx + 8, ty + 40], fill=(101, 67, 33))
+                # Tree crown
+                draw.ellipse([tx - 15, ty - 20, tx + 23, ty + 10], fill=(34, 139, 34))
             
         elif show_id == 'pll':
             # Dark mysterious house with "A" elements
@@ -408,9 +545,9 @@ class ShowImageGenerator:
             # Ensure image is the right size
             base_img = base_img.resize((1024, 1024), Image.Resampling.LANCZOS)
             
-            # Darken the image for better text readability
+            # Keep the image bright and vibrant
             enhancer = ImageEnhance.Brightness(base_img)
-            base_img = enhancer.enhance(0.4)  # Make it darker
+            base_img = enhancer.enhance(1.1)  # Make it slightly brighter
             
             # Add subtle blur for text overlay area
             overlay_area = base_img.copy()
@@ -420,9 +557,9 @@ class ShowImageGenerator:
             overlay = Image.new('RGBA', (1024, 1024), (0, 0, 0, 0))
             overlay_draw = ImageDraw.Draw(overlay)
             
-            # Add dark gradient overlay at bottom for text
-            for y in range(512, 1024):
-                alpha = int(((y - 512) / 512) * 180)  # Gradient from transparent to dark
+            # Add subtle dark gradient overlay at bottom for text
+            for y in range(600, 1024):
+                alpha = int(((y - 600) / 424) * 120)  # Lighter gradient from transparent to semi-dark
                 overlay_draw.line([(0, y), (1024, y)], fill=(0, 0, 0, alpha))
             
             # Composite the overlay

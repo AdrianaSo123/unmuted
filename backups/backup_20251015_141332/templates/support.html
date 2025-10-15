@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero support-hero">
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1 class="hero-title">{{ page.hero.title }}</h1>
+            <p class="hero-subtitle">{{ page.hero.subtitle }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Support Options - Simplified & Centered -->
+<section class="support-options py-5xl">
+    <div class="container">
+        <!-- Centered Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; max-width: 1000px; margin: 0 auto;">
+            {% for option in page.support_options %}
+            <div class="service-card" style="text-align: center; border-top: 5px solid {{ option.color }};">
+                
+                <!-- Icon -->
+                <div style="padding: 3rem 2rem 1.5rem;">
+                    <div class="value-prop-icon" style="background: {{ option.color }}; margin: 0 auto;">
+                        <i class="{{ option.icon }}"></i>
+                    </div>
+                </div>
+                
+                <!-- Title & Subtitle -->
+                <div style="padding: 0 2rem 1.5rem;">
+                    <h2 class="service-title" style="margin-bottom: 0.75rem;">
+                        {{ option.title }}
+                    </h2>
+                    <p style="color: {{ option.color }}; font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">
+                        {{ option.subtitle }}
+                    </p>
+                    <p class="service-description">
+                        {{ option.description }}
+                    </p>
+                </div>
+                
+                <!-- Benefits -->
+                <div style="padding: 0 2rem 2rem;">
+                    <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                        {% for benefit in option.benefits %}
+                        <li style="padding: 0.75rem 0; color: var(--gray-700); display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: {{ option.color }}; font-size: 1.25rem; flex-shrink: 0;"></i>
+                            <span>{{ benefit }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+                <!-- Button -->
+                <div style="padding: 0 2rem 3rem;">
+                    {% if option.external %}
+                    <a href="{{ option.cta_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="width: 100%; background: {{ option.color }}; border-color: {{ option.color }};">
+                        <i class="{{ option.icon }}"></i> {{ option.cta_text }}
+                    </a>
+                    {% else %}
+                    <a href="{{ option.cta_link }}" class="btn btn-primary btn-lg" style="width: 100%; background: {{ option.color }}; border-color: {{ option.color }};">
+                        <i class="{{ option.icon }}"></i> {{ option.cta_text }}
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Why Support Section -->
+<section class="why-support py-5xl" style="background: var(--gray-50);">
+    <div class="container text-center">
+        <div class="section-header" style="margin-bottom: 4rem;">
+            <h2 class="section-title" style="margin-bottom: 1rem;">
+                {{ page.why_support.title }}
+            </h2>
+            <p class="section-subtitle" style="max-width: 700px; margin: 0 auto;">
+                Your support keeps Unmuted independent, ad-free, and accessible to everyone
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; max-width: 1100px; margin: 0 auto;">
+            {% for reason in page.why_support.reasons %}
+            <div class="value-prop-card">
+                <div class="value-prop-icon" style="background: linear-gradient(135deg, var(--coral-500) 0%, var(--teal-500) 100%); margin: 0 auto;">
+                    <i class="fas {{ reason.icon }}"></i>
+                </div>
+                <h3 class="value-prop-title">
+                    {{ reason.title }}
+                </h3>
+                <p class="value-prop-description">
+                    {{ reason.description }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
