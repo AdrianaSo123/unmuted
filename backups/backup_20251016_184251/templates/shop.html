@@ -14,67 +14,20 @@
 <!-- Products Section - Shopify Integration -->
 <section class="products-section py-5xl">
     <div class="container">
-        
-        {% if page.test_mode %}
-        <!-- TEST MODE: Show placeholder products -->
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div class="text-center" style="margin-bottom: 4rem;">
-                <div style="display: inline-block; background: var(--purple-100); color: var(--purple-700); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
-                    🧪 TEST MODE
-                </div>
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">
-                    Featured Products
-                </h2>
-                <p class="section-subtitle">
-                    These are placeholder products to test the shop layout
-                </p>
-            </div>
-            
-            <!-- Product Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                {% for product in page.featured_products %}
-                <div class="service-card" style="padding: 0; overflow: hidden;">
-                    <!-- Product Image -->
-                    <div style="background: linear-gradient(135deg, var(--purple-200) 0%, var(--pink-200) 100%); height: 280px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-image" style="font-size: 4rem; color: var(--gray-400);"></i>
-                    </div>
-                    
-                    <!-- Product Info -->
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900);">
-                            {{ product.name }}
-                        </h3>
-                        <p style="color: var(--gray-600); margin-bottom: 1rem; font-size: 0.95rem;">
-                            {{ product.description }}
-                        </p>
-                        <div style="display: flex; align-items: center; justify-content: space-between;">
-                            <span style="font-size: 1.5rem; font-weight: 700; color: var(--coral-500);">
-                                {{ product.price }}
-                            </span>
-                            <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;" disabled>
-                                <i class="fas fa-shopping-cart"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-            
-            <!-- Test Mode Notice -->
-            <div class="service-card" style="margin-top: 3rem; padding: 2rem; text-align: center; background: var(--gray-50);">
-                <p style="color: var(--gray-700); margin: 0;">
-                    <i class="fas fa-info-circle" style="color: var(--purple-500);"></i>
-                    <strong>Test Mode Active:</strong> These are placeholder products. To connect real products, paste your Shopify Buy Button code in <code>templates/shop.html</code> or set <code>test_mode: false</code> in <code>content/pages/shop.md</code>
-                </p>
-            </div>
-        </div>
-        
-        {% elif site.shopify_store_url %}
-        <!-- OPTION 3: Link to Shopify Store -->
+        <!-- Shopify Buy Button Container -->
+        <!-- To add products: Replace this div with Shopify Buy Button embed code -->
         <div id="shopify-products" style="max-width: 1200px; margin: 0 auto;">
-            <!-- PASTE SHOPIFY BUY BUTTON CODE HERE -->
-            <!-- Or use the link below if you just want to link to your store -->
             
+            <!-- OPTION 1: Individual Product Buy Buttons -->
+            <!-- Get from: Shopify Admin → Products → [Product] → More actions → Create Buy Button -->
+            <!-- Paste embed code here -->
+            
+            <!-- OPTION 2: Collection Buy Button -->
+            <!-- Get from: Shopify Admin → Products → Collections → [Collection] → Create Buy Button -->
+            <!-- Paste embed code here -->
+            
+            <!-- OPTION 3: Link to Shopify Store -->
+            {% if site.shopify_store_url %}
             <div class="text-center" style="padding: 4rem 0;">
                 <div style="font-size: 4rem; margin-bottom: 1.5rem;">
                     <i class="fas fa-shopping-bag" style="color: var(--coral-500);"></i>
@@ -89,11 +42,8 @@
                     <i class="fab fa-shopify"></i> Shop Now
                 </a>
             </div>
-        </div>
-        
-        {% else %}
-        <!-- Coming Soon Placeholder -->
-        <div id="shopify-products" style="max-width: 1200px; margin: 0 auto;">
+            {% else %}
+            <!-- Coming Soon Placeholder -->
             <div class="text-center" style="padding: 4rem 0;">
                 <div style="font-size: 4rem; margin-bottom: 1.5rem;">
                     <i class="fas fa-shopping-bag" style="color: var(--coral-500);"></i>
@@ -128,9 +78,9 @@
                     </a>
                 </div>
             </div>
+            {% endif %}
+            
         </div>
-        {% endif %}
-        
     </div>
 </section>
 
