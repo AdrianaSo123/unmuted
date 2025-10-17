@@ -5,17 +5,17 @@ page_id: "home"
 
 # Hero Section
 hero:
-  title: "Critical Analysis That's Actually Funny"
-  subtitle: "We break down 2010s teen dramas from diverse perspectives—unpacking the good rep, calling out the problematic stuff, and making media literacy entertaining."
+  title: "Diverse Voices on 2010s Teen Dramas"
+  subtitle: "Critical media analysis that's actually funny. We unpack representation, call out problematic tropes, and make media literacy entertaining."
   image: "images/hero/teen_dramas.jpeg"
   image_alt: "Collage of iconic 2010s teen drama moments with diverse cultural lens"
   cta_primary:
     text: "Watch Content"
     url: "playlists.html"
   cta_secondary:
-    text: "Join Community"
-    url: "#contact"
-    icon: "fa-users"
+    text: "Join Discord"
+    url: "https://discord.gg/YOUR_INVITE_CODE"
+    icon: "fa-discord"
 
 # Sections to Show
 sections:
@@ -37,21 +37,17 @@ services:
 
 # CTA Section
 cta:
-  title: "Ready to Join the Community?"
-  description: "Support independent creators, join Discord, or just keep watching—we're glad you're here"
+  title: "Join the Conversation"
+  description: "Connect with other fans who love critical analysis. Free, always."
   background_image: "images/hero/teen_dramas.jpeg"
   buttons:
-    - text: "Watch More Content"
-      url: "playlists.html"
-      icon: "fa-play-circle"
+    - text: "Join Discord"
+      url: "https://discord.gg/YOUR_INVITE_CODE"
+      icon: "fa-discord"
       style: "primary"
-    - text: "Support Unmuted"
-      url: "support.html"
-      icon: "fa-heart"
-      style: "white"
   guarantee:
-    icon: "fa-users"
-    text: "Free Content • Independent Voices • Critical Analysis"
+    icon: "fa-heart"
+    text: "Want to support? Check out our Support page or Shop"
 
 # SEO
 seo:
