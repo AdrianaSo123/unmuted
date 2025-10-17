@@ -33,7 +33,7 @@ site:
     discord: ""  # Add Discord invite link if you have one
   
   # E-commerce
-  shopify_store_url: ""  # Add your Shopify store URL (e.g., https://unmuted.myshopify.com)
+  shopify_store_url: "https://unmuted-shop.myshopify.com"
   
   # SEO Keywords
   keywords:
