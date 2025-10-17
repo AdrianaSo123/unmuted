@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero shop-hero">
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1 class="hero-title">{{ page.hero.title }}</h1>
+            <p class="hero-subtitle">{{ page.hero.subtitle }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section - Shopify Integration -->
+<section class="products-section py-5xl">
+    <div class="container">
+        
+        {% if page.test_mode %}
+        <!-- TEST MODE: Show placeholder products -->
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <div style="display: inline-block; background: var(--purple-100); color: var(--purple-700); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                    🧪 TEST MODE
+                </div>
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">
+                    Featured Products
+                </h2>
+                <p class="section-subtitle">
+                    These are placeholder products to test the shop layout
+                </p>
+            </div>
+            
+            <!-- Product Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                {% for product in page.featured_products %}
+                <div class="service-card" style="padding: 0; overflow: hidden;">
+                    <!-- Product Image -->
+                    <div style="background: linear-gradient(135deg, var(--purple-200) 0%, var(--pink-200) 100%); height: 280px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-image" style="font-size: 4rem; color: var(--gray-400);"></i>
+                    </div>
+                    
+                    <!-- Product Info -->
+                    <div style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900);">
+                            {{ product.name }}
+                        </h3>
+                        <p style="color: var(--gray-600); margin-bottom: 1rem; font-size: 0.95rem;">
+                            {{ product.description }}
+                        </p>
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <span style="font-size: 1.5rem; font-weight: 700; color: var(--coral-500);">
+                                {{ product.price }}
+                            </span>
+                            <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;" disabled>
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Test Mode Notice -->
+            <div class="service-card" style="margin-top: 3rem; padding: 2rem; text-align: center; background: var(--gray-50);">
+                <p style="color: var(--gray-700); margin: 0;">
+                    <i class="fas fa-info-circle" style="color: var(--purple-500);"></i>
+                    <strong>Test Mode Active:</strong> These are placeholder products. To connect real products, paste your Shopify Buy Button code in <code>templates/shop.html</code> or set <code>test_mode: false</code> in <code>content/pages/shop.md</code>
+                </p>
+            </div>
+        </div>
+        
+        {% elif site.shopify_store_url %}
+        <!-- Shopify Buy Button - Products Embedded -->
+        <div id="shopify-products" style="max-width: 1200px; margin: 0 auto;">
+            
+            <!-- Shopify Collection Buy Button -->
+            <div id='collection-component-1760664923938'></div>
+            <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+              if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                  ShopifyBuyInit();
+                } else {
+                  loadScript();
+                }
+              } else {
+                loadScript();
+              }
+              function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+              }
+              function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                  domain: 'unmuted-shop.myshopify.com',
+                  storefrontAccessToken: '5c9325736596f44ab3dc937c5368e38e',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                  ui.createComponent('collection', {
+                    id: '503150641433',
+                    node: document.getElementById('collection-component-1760664923938'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    },
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
+                    }
+                  },
+                  "button": {
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    "background-color": "#ec4899",
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    },
+                    "border-radius": "9px"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    "background-color": "#ec4899",
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    },
+                    "border-radius": "9px"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    "background-color": "#ec4899",
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    },
+                    "border-radius": "9px"
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                }
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "background-color": "#ec4899",
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    }
+                  }
+                }
+              }
+            },
+                  });
+                });
+              }
+            })();
+            /*]]>*/
+            </script>
+            
+        </div>
+        
+        {% else %}
+        <!-- Coming Soon Placeholder -->
+        <div id="shopify-products" style="max-width: 1200px; margin: 0 auto;">
+            <div class="text-center" style="padding: 4rem 0;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">
+                    <i class="fas fa-shopping-bag" style="color: var(--coral-500);"></i>
+                </div>
+                <h2 class="section-title" style="margin-bottom: 1rem;">
+                    {{ page.coming_soon.title }}
+                </h2>
+                <p class="section-subtitle" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    {{ page.coming_soon.message }}
+                </p>
+                
+                <!-- Features Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 3rem auto; max-width: 900px;">
+                    {% for feature in page.coming_soon.features %}
+                    <div class="value-prop-card">
+                        <i class="fas fa-check-circle" style="color: var(--teal-500); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                        <p style="margin: 0;">{{ feature }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <!-- Email Signup -->
+                <div class="service-card" style="max-width: 600px; margin: 3rem auto; padding: 3rem;">
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">
+                        Get Notified When We Launch
+                    </h3>
+                    <p style="color: var(--gray-600); margin-bottom: 1.5rem;">
+                        Be the first to know about new drops, exclusive designs, and special offers
+                    </p>
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-bell"></i> Notify Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+    </div>
+</section>
+
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2 class="cta-title">Want to Support Unmuted Now?</h2>
+        <p class="cta-description" style="color: #000000 !important; text-shadow: none !important;">
+            Join our Discord community and help shape what merch we create
+        </p>
+        <a href="index.html#contact" class="btn btn-primary btn-lg">
+            <i class="fab fa-discord"></i> Join the Community
+        </a>
+    </div>
+</section>
+{% endblock %}
