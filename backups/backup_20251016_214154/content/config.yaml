@@ -32,6 +32,9 @@ site:
     patreon: "https://www.patreon.com/unmuted"  # Add your real Patreon URL here
     discord: ""  # Add Discord invite link if you have one
   
+  # E-commerce
+  shopify_store_url: "https://unmuted-shop.myshopify.com"
+  
   # SEO Keywords
   keywords:
     - "2010s teen dramas"

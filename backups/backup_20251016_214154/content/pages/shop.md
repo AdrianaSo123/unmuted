@@ -54,6 +54,9 @@ featured_products:
     image: "images/shop/placeholder-tote.jpg"
     category: "accessories"
 
+# Test Mode (set to true to show placeholder products, false to use Shopify)
+test_mode: false
+
 # Coming Soon Message
 coming_soon:
   title: "Shop Opening Soon!"
