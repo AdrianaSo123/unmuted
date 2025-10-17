@@ -40,27 +40,30 @@ jobs:
             echo "" >> $GITHUB_STEP_SUMMARY
             
             # Parse JSON and create summary
-            python -c "
+            python -c '
 import json
-with open('validation-report.json') as f:
+with open("validation-report.json") as f:
     data = json.load(f)
-    summary = data['summary']
+    summary = data["summary"]
     
-    print('### Overall Status')
-    print(f\"- **Tests Run**: {summary['total_tests']}\")
-    print(f\"- **Passed**: ✅ {summary['passed']}\")
-    print(f\"- **Failed**: {'❌ ' + str(summary['failed']) if summary['failed'] > 0 else '✅ 0'}\")
-    print(f\"- **Errors**: {'🔴 ' + str(summary['total_errors']) if summary['total_errors'] > 0 else '✅ 0'}\")
-    print(f\"- **Warnings**: {'⚠️ ' + str(summary['total_warnings']) if summary['total_warnings'] > 0 else '✅ 0'}\")
+    print("### Overall Status")
+    print(f"- **Tests Run**: {summary[\"total_tests\"]}")
+    print(f"- **Passed**: ✅ {summary[\"passed\"]}")
+    failed_str = f"❌ {summary[\"failed\"]}" if summary["failed"] > 0 else "✅ 0"
+    print(f"- **Failed**: {failed_str}")
+    errors_str = f"🔴 {summary[\"total_errors\"]}" if summary["total_errors"] > 0 else "✅ 0"
+    print(f"- **Errors**: {errors_str}")
+    warnings_str = f"⚠️ {summary[\"total_warnings\"]}" if summary["total_warnings"] > 0 else "✅ 0"
+    print(f"- **Warnings**: {warnings_str}")
     print()
     
-    if summary['total_errors'] == 0:
-        print('### ✅ All Quality Gates Passed!')
+    if summary["total_errors"] == 0:
+        print("### ✅ All Quality Gates Passed!")
     else:
-        print('### ⚠️ Quality Issues Found')
+        print("### ⚠️ Quality Issues Found")
         print()
-        print('Check the detailed report artifact for more information.')
-            " >> $GITHUB_STEP_SUMMARY
+        print("Check the detailed report artifact for more information.")
+            ' >> $GITHUB_STEP_SUMMARY
           fi
       
       - name: 📊 Upload validation report
