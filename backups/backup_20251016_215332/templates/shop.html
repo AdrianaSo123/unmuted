@@ -70,25 +70,158 @@
         </div>
         
         {% elif site.shopify_store_url %}
-        <!-- OPTION 3: Link to Shopify Store -->
+        <!-- Shopify Buy Button - Products Embedded -->
         <div id="shopify-products" style="max-width: 1200px; margin: 0 auto;">
-            <!-- PASTE SHOPIFY BUY BUTTON CODE HERE -->
-            <!-- Or use the link below if you just want to link to your store -->
             
-            <div class="text-center" style="padding: 4rem 0;">
-                <div style="font-size: 4rem; margin-bottom: 1.5rem;">
-                    <i class="fas fa-shopping-bag" style="color: var(--coral-500);"></i>
-                </div>
-                <h2 class="section-title" style="margin-bottom: 1rem;">
-                    Visit Our Shop
-                </h2>
-                <p class="section-subtitle" style="margin-bottom: 2rem;">
-                    Browse our full collection of Unmuted merch
-                </p>
-                <a href="{{ site.shopify_store_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-                    <i class="fab fa-shopify"></i> Shop Now
-                </a>
-            </div>
+            <!-- Shopify Collection Buy Button -->
+            <div id='collection-component-1760664923938'></div>
+            <script type="text/javascript">
+            /*<![CDATA[*/
+            (function () {
+              var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+              if (window.ShopifyBuy) {
+                if (window.ShopifyBuy.UI) {
+                  ShopifyBuyInit();
+                } else {
+                  loadScript();
+                }
+              } else {
+                loadScript();
+              }
+              function loadScript() {
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = scriptURL;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                script.onload = ShopifyBuyInit;
+              }
+              function ShopifyBuyInit() {
+                var client = ShopifyBuy.buildClient({
+                  domain: 'unmuted-shop.myshopify.com',
+                  storefrontAccessToken: '5c9325736596f44ab3dc937c5368e38e',
+                });
+                ShopifyBuy.UI.onReady(client).then(function (ui) {
+                  ui.createComponent('collection', {
+                    id: '503150641433',
+                    node: document.getElementById('collection-component-1760664923938'),
+                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                    options: {
+              "product": {
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "calc(25% - 20px)",
+                      "margin-left": "20px",
+                      "margin-bottom": "50px",
+                      "width": "calc(25% - 20px)"
+                    },
+                    "img": {
+                      "height": "calc(100% - 15px)",
+                      "position": "absolute",
+                      "left": "0",
+                      "right": "0",
+                      "top": "0"
+                    },
+                    "imgWrapper": {
+                      "padding-top": "calc(75% + 15px)",
+                      "position": "relative",
+                      "height": "0"
+                    }
+                  },
+                  "button": {
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    "background-color": "#ec4899",
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    },
+                    "border-radius": "9px"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "productSet": {
+                "styles": {
+                  "products": {
+                    "@media (min-width: 601px)": {
+                      "margin-left": "-20px"
+                    }
+                  }
+                }
+              },
+              "modalProduct": {
+                "contents": {
+                  "img": false,
+                  "imgWithCarousel": true,
+                  "button": false,
+                  "buttonWithQuantity": true
+                },
+                "styles": {
+                  "product": {
+                    "@media (min-width: 601px)": {
+                      "max-width": "100%",
+                      "margin-left": "0px",
+                      "margin-bottom": "0px"
+                    }
+                  },
+                  "button": {
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    "background-color": "#ec4899",
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    },
+                    "border-radius": "9px"
+                  }
+                },
+                "text": {
+                  "button": "Add to cart"
+                }
+              },
+              "option": {},
+              "cart": {
+                "styles": {
+                  "button": {
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    "background-color": "#ec4899",
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    },
+                    "border-radius": "9px"
+                  }
+                },
+                "text": {
+                  "total": "Subtotal",
+                  "button": "Checkout"
+                }
+              },
+              "toggle": {
+                "styles": {
+                  "toggle": {
+                    "background-color": "#ec4899",
+                    ":hover": {
+                      "background-color": "#d4418a"
+                    },
+                    ":focus": {
+                      "background-color": "#d4418a"
+                    }
+                  }
+                }
+              }
+            },
+                  });
+                });
+              }
+            })();
+            /*]]>*/
+            </script>
+            
         </div>
         
         {% else %}
@@ -134,47 +267,6 @@
     </div>
 </section>
 
-<!-- Shop Categories Preview -->
-<section class="categories-section" style="padding: 4rem 0;">
-    <div class="container">
-        <div class="text-center" style="margin-bottom: 3rem;">
-            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: #1E2A3A;">
-                What's Coming
-            </h2>
-            <p style="color: #627D98; font-size: 1.1rem;">
-                Sneak peek at our upcoming product categories
-            </p>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-            {% for category in page.categories %}
-            <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); text-align: center;">
-                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
-                    <i class="fas {{ category.icon }}" style="font-size: 2rem; color: white;"></i>
-                </div>
-                <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: #1E2A3A;">
-                    {{ category.name }}
-                </h3>
-                <p style="color: #627D98; margin: 0;">
-                    {{ category.description }}
-                </p>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- Shopify Integration Note -->
-<section class="integration-note" style="padding: 3rem 0; background: #1E2A3A; color: white; text-align: center;">
-    <div class="container">
-        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">
-            <i class="fab fa-shopify"></i> Powered by Shopify
-        </h3>
-        <p style="color: #9FB3C8; margin: 0;">
-            Full e-commerce integration coming soon
-        </p>
-    </div>
-</section>
 
 <!-- CTA Section -->
 <section class="cta-section">

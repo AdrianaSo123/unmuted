@@ -1,0 +1,32 @@
+<section class="cta" id="contact" style="background: var(--gray-50); padding: 6rem 0;">
+    <div class="container">
+        <div class="cta-content" style="background: linear-gradient(135deg, var(--purple-600) 0%, var(--pink-600) 100%); border-radius: 24px; padding: 4rem 3rem; text-align: center; max-width: 900px; margin: 0 auto; box-shadow: 0 20px 60px rgba(0,0,0,0.15); position: relative; overflow: hidden;">
+            <!-- Decorative elements -->
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; pointer-events: none;"></div>
+            <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="position: relative; z-index: 1;">
+                <h2 class="cta-title" style="color: white; font-size: 2.75rem; margin-bottom: 1rem; font-weight: 800;">
+                    {{ page.cta.title if page.cta else 'Get in Touch' }}
+                </h2>
+                <p class="cta-subtitle" style="color: rgba(255,255,255,0.95); font-size: 1.35rem; margin-bottom: 2.5rem; font-weight: 500;">
+                    {{ page.cta.description if page.cta else '' }}
+                </p>
+                <div class="cta-buttons" style="margin-bottom: 1.5rem;">
+                    {% if page.cta and page.cta.buttons %}
+                    {% for button in page.cta.buttons %}
+                    <a href="{{ button.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-lg" style="padding: 1.25rem 3.5rem; font-size: 1.25rem; font-weight: 700; background: white; color: var(--purple-600); border: none; box-shadow: 0 8px 24px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                        {% if button.icon %}<i class="fab {{ button.icon }}"></i> {% endif %}{{ button.text }}
+                    </a>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                {% if page.cta and page.cta.guarantee %}
+                <p class="cta-guarantee" style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0; font-weight: 500;">
+                    <i class="fas {{ page.cta.guarantee.icon }}"></i> {{ page.cta.guarantee.text }}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

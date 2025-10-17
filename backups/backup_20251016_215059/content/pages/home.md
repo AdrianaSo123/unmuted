@@ -37,21 +37,17 @@ services:
 
 # CTA Section
 cta:
-  title: "Ready to Join the Community?"
-  description: "Support independent creators, join Discord, or just keep watching—we're glad you're here"
+  title: "Join the Conversation"
+  description: "Connect with other fans who love critical analysis. Free, always."
   background_image: "images/hero/teen_dramas.jpeg"
   buttons:
-    - text: "Watch More Content"
-      url: "playlists.html"
-      icon: "fa-play-circle"
+    - text: "Join Discord"
+      url: "https://discord.gg/YOUR_INVITE_CODE"
+      icon: "fa-discord"
       style: "primary"
-    - text: "Support Unmuted"
-      url: "support.html"
-      icon: "fa-heart"
-      style: "white"
   guarantee:
-    icon: "fa-users"
-    text: "Free Content • Independent Voices • Critical Analysis"
+    icon: "fa-heart"
+    text: "Want to support? Check out our Support page or Shop"
 
 # SEO
 seo:
