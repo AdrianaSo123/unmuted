@@ -11,8 +11,8 @@ seo:
 
 # Hero Section
 hero:
-  title: "Unmuted Shop"
-  subtitle: "Rep your critical media literacy with exclusive merch"
+  title: "Merch That Matters"
+  subtitle: "Support independent creators. Rep your favorite shows. Start conversations."
   
 # Shop Categories (placeholder for Shopify integration)
 categories:

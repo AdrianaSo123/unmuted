@@ -2,11 +2,19 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero shop-hero">
-    <div class="container">
-        <div class="hero-content text-center">
-            <h1 class="hero-title">{{ page.hero.title }}</h1>
-            <p class="hero-subtitle">{{ page.hero.subtitle }}</p>
+<section class="hero shop-hero" style="background: linear-gradient(135deg, var(--purple-600) 0%, var(--pink-600) 100%); padding: 5rem 0 4rem; position: relative; overflow: hidden;">
+    <!-- Decorative elements -->
+    <div style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(255,255,255,0.1); border-radius: 50%; pointer-events: none;"></div>
+    <div style="position: absolute; bottom: -50px; left: -50px; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; pointer-events: none;"></div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="hero-content text-center" style="max-width: 700px; margin: 0 auto;">
+            <h1 class="hero-title" style="color: white; font-size: 3.5rem; margin-bottom: 1rem; font-weight: 700;">
+                {{ page.hero.title }}
+            </h1>
+            <p class="hero-subtitle" style="color: rgba(255,255,255,0.95); font-size: 1.35rem; line-height: 1.6;">
+                {{ page.hero.subtitle }}
+            </p>
         </div>
     </div>
 </section>

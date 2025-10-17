@@ -1,0 +1,20 @@
+<section class="cta-section" id="contact">
+    <div class="container text-center">
+        <h2 class="cta-title">{{ page.cta.title if page.cta else 'Get in Touch' }}</h2>
+        <p class="cta-description" style="color: #000000 !important; text-shadow: none !important;">
+            {{ page.cta.description if page.cta else '' }}
+        </p>
+        {% if page.cta and page.cta.buttons %}
+        {% for button in page.cta.buttons %}
+        <a href="{{ button.url }}" target="_blank" rel="noopener noreferrer" class="btn btn-{{ button.style }} btn-lg">
+            {% if button.icon %}<i class="fab {{ button.icon }}"></i> {% endif %}{{ button.text }}
+        </a>
+        {% endfor %}
+        {% endif %}
+        {% if page.cta and page.cta.guarantee %}
+        <p style="margin-top: 1.5rem; color: var(--gray-600); font-size: 0.95rem;">
+            <i class="fas {{ page.cta.guarantee.icon }}"></i> {{ page.cta.guarantee.text }}
+        </p>
+        {% endif %}
+    </div>
+</section>
