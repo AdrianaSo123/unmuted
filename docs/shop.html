@@ -179,6 +179,28 @@ aria-current="page">
         <!-- Shopify Buy Button - Products Embedded -->
         <div id="shopify-products" style="max-width: 1200px; margin: 0 auto;">
             
+            <!-- Custom CSS for button alignment -->
+            <style>
+                /* Align all product buttons to bottom */
+                .shopify-buy__product {
+                    display: flex !important;
+                    flex-direction: column !important;
+                }
+                .shopify-buy__product__variant-selectors {
+                    margin-top: auto !important;
+                }
+                .shopify-buy__btn-wrapper {
+                    margin-top: auto !important;
+                }
+                /* Reduce bottom spacing */
+                #shopify-products {
+                    margin-bottom: 2rem !important;
+                }
+                .products-section {
+                    padding-bottom: 3rem !important;
+                }
+            </style>
+            
             <!-- Shopify Collection Buy Button -->
             <div id='collection-component-1760664923938'></div>
             <script type="text/javascript">
