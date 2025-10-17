@@ -38,32 +38,7 @@ jobs:
           if [ -f validation-report.json ]; then
             echo "## 📊 Validation Report" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            
-            # Parse JSON and create summary
-            python -c '
-import json
-with open("validation-report.json") as f:
-    data = json.load(f)
-    summary = data["summary"]
-    
-    print("### Overall Status")
-    print(f"- **Tests Run**: {summary[\"total_tests\"]}")
-    print(f"- **Passed**: ✅ {summary[\"passed\"]}")
-    failed_str = f"❌ {summary[\"failed\"]}" if summary["failed"] > 0 else "✅ 0"
-    print(f"- **Failed**: {failed_str}")
-    errors_str = f"🔴 {summary[\"total_errors\"]}" if summary["total_errors"] > 0 else "✅ 0"
-    print(f"- **Errors**: {errors_str}")
-    warnings_str = f"⚠️ {summary[\"total_warnings\"]}" if summary["total_warnings"] > 0 else "✅ 0"
-    print(f"- **Warnings**: {warnings_str}")
-    print()
-    
-    if summary["total_errors"] == 0:
-        print("### ✅ All Quality Gates Passed!")
-    else:
-        print("### ⚠️ Quality Issues Found")
-        print()
-        print("Check the detailed report artifact for more information.")
-            ' >> $GITHUB_STEP_SUMMARY
+            python .github/scripts/generate_summary.py >> $GITHUB_STEP_SUMMARY
           fi
       
       - name: 📊 Upload validation report
