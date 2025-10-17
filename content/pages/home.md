@@ -15,7 +15,7 @@ hero:
   cta_secondary:
     text: "Join Discord"
     url: "https://discord.gg/YOUR_INVITE_CODE"
-    icon: "fa-discord"
+    icon: "fab fa-discord"
 
 # Sections to Show
 sections:

@@ -5,17 +5,17 @@ page_id: "home"
 
 # Hero Section
 hero:
-  title: "Critical Analysis That's Actually Funny"
-  subtitle: "We break down 2010s teen dramas from diverse perspectives—unpacking the good rep, calling out the problematic stuff, and making media literacy entertaining."
+  title: "Diverse Voices on 2010s Teen Dramas"
+  subtitle: "Critical media analysis that's actually funny. We unpack representation, call out problematic tropes, and make media literacy entertaining."
   image: "images/hero/teen_dramas.jpeg"
   image_alt: "Collage of iconic 2010s teen drama moments with diverse cultural lens"
   cta_primary:
     text: "Watch Content"
     url: "playlists.html"
   cta_secondary:
-    text: "Join Community"
-    url: "#contact"
-    icon: "fa-users"
+    text: "Join Discord"
+    url: "https://discord.gg/YOUR_INVITE_CODE"
+    icon: "fab fa-discord"
 
 # Sections to Show
 sections:
